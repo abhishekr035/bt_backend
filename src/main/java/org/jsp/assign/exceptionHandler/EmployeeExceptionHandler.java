@@ -20,6 +20,6 @@ public class EmployeeExceptionHandler
 	@ExceptionHandler(NoEmployeeFoundException.class)
 	public ResponseEntity<?> noEmployeeFoundExceptionHandler(NoEmployeeFoundException e)
 	{
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseStructure.builder().status(HttpStatus.BAD_REQUEST.value()).message("No Employees Found").body(e.getMessage()).build());
+		return ResponseEntity.status(HttpStatus.OK).body(ResponseStructure.builder().status(HttpStatus.OK.value()).message("No Employees Found").body(e.getMessage()).build());
 	}
 }

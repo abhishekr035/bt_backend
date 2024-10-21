@@ -14,7 +14,7 @@ public class EmployeeExceptionHandler
 	@ExceptionHandler(InvalidEmployeeIdException.class)
 	public ResponseEntity<?> invalidEventIdExceptionHandler(InvalidEmployeeIdException e)
 	{
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResponseStructure.builder().status(HttpStatus.BAD_REQUEST.value()).message("Invalid Employee Id").body(e.getMessage()).build());
+		return ResponseEntity.status(HttpStatus.OK).body(ResponseStructure.builder().status(HttpStatus.OK.value()).message("Invalid Employee Id").body(e.getMessage()).build());
 	}
 	
 	@ExceptionHandler(NoEmployeeFoundException.class)
